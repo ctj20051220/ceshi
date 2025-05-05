@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实慧星chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            width: 1500px;
+            height: 150px;
+            line-height: 0;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <img src="./shx.png" 
+    srcset="shx485.png 480w,
+    shx768.png 768w,
+    shx1200.png 1200w,
+    shx1920.png 1920w"
+    sizes="(max-width: 640px) 100vw, 
+    (max-width: 1024px) 80vw, 1200px" 
+alt="实彗星" class="responsive-image" loading="lazy" 
+decoding="async"> <!-- 异步解码 -->
+    <div class="header">
+        <h2>彗星AI助教</h2> 
+    </div>
+    <div class="chat-container">
+        <div class="messages" id="messages"></div>
+        <div id="loading" class="loading" style="display: none;">加载中...</div>
+        <div class="input-container">
+            <input id="chat-input" type="text" placeholder="输入消息..." />
+            <button onclick="sendMessage()">发送</button>
+            <div class="dropdown">
+                <button onclick="toggleDropdown(event)">更多</button>
+                <div class="dropdown-content" id="dropdownMenu">
+                    <div class="dropdown-item" onclick="toggleTheme()">
+                        <span>浅色/深色</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
